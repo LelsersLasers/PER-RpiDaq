@@ -1,0 +1,1 @@
+Logs from the Python script itself (print, etc), not DAQ log data
