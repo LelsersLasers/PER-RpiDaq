@@ -1,0 +1,5 @@
+# Top-left (grey) USB port → ttyCANable0
+SUBSYSTEM=="tty", KERNELS=="1-1.1", SYMLINK+="ttyCANable0"
+
+# Bottom (grey) USB port → ttyCANable1
+SUBSYSTEM=="tty", KERNELS=="1-1.2", SYMLINK+="ttyCANable1"
