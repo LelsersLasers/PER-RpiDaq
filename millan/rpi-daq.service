@@ -1,0 +1,18 @@
+[Unit]
+Description=Millan's PER RPI 5 DAQ service
+After=network.target
+
+[Service]
+Type=simple
+User=per
+WorkingDirectory=/home/per/PER-RpiDaq/millan
+ExecStart=/usr/bin/python3 /home/per/PER-RpiDaq/millan/main.py
+Restart=always
+RestartSec=20
+
+# Log stdout + stderr to file
+StandardOutput=append:/home/per/PER-RpiDaq/millan/script_logs.txt
+StandardError=append:/home/per/PER-RpiDaq/millan/script_logs.txt
+
+[Install]
+WantedBy=multi-user.target
