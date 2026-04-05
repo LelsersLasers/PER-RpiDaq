@@ -26,7 +26,15 @@ The Pi should turn on and init all 3 canables and start logging without any inte
   - This is done because the RPI keeps bad real time
 5. :money: :vd_happy:
 
-## Where things go
+## Canable connections
+
+- Grey top = `ttyCANable0` = VCAN
+- Grey bottom = `ttyCANable1` = MCAN
+- Blue top = `ttyCANable2` = Tranducer
+
+## RPI5 Setup
+
+### Where things go
 
 (once)
 
@@ -44,7 +52,7 @@ The Pi should turn on and init all 3 canables and start logging without any inte
       sudo systemctl enable tcan.service && sudo systemctl start tcan.service
     ```
 
-## Access point mode
+### Access point mode
 
 (once)
 
@@ -60,9 +68,3 @@ sudo nmcli connection modify hotspot \
   connection.autoconnect yes \
   connection.autoconnect-priority 999
 ```
-
-## Canables
-
-- Grey top = `ttyCANable0` = VCAN
-- Grey bottom = `ttyCANable1` = MCAN
-- Blue top = `ttyCANable2` = Tranducer
