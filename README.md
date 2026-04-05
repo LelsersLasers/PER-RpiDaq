@@ -17,11 +17,11 @@ The Pi should turn on and init all 3 canables and start logging without any inte
 
 ### Get logs
 
-1. Connect to `PER-DaqRpi Wifi` (password: `12345678`)
-2. On latop move to the `millan` folder (`cd millan`)
-3. copy logs: `bash scp_logs.sh`
-4. Rename `millan/copied/logs` to something like `millan/copied/logs_some_text_that_is_useful`
-4. Remove old logs: `bash ssh.sh` and then `cd PER-RpiDaq/millan/logs` and then `rm -vr *`
+1. On laptop: connect to `PER-DaqRpi Wifi` (password: `12345678`)
+2. On laptop: move to the `millan` folder (`cd millan`)
+3. On laptop: copy logs: `bash scp_logs.sh`
+4. On laptop: rename `millan/copied/logs` to something like `millan/copied/logs_some_text_that_is_useful`
+4. Remove old logs: `bash ssh.sh` and then (now on RPI) `cd PER-RpiDaq/millan/logs` and then `rm -vr *`
   - Don't remove the `logs` folder itself other wise the loggers will crash
   - This is done because the RPI keeps bad real time
 5. :money: :vd_happy:
