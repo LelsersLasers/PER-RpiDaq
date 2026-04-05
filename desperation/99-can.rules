@@ -1,0 +1,5 @@
+# CANABLE serial port naming rules (requires literally plugging them into certain ports on the rpi)
+# TOP PORT (GREY):
+SUBSYSTEM=="tty", KERNELS=="1-2", SYMLINK+="ttyCANable0"
+# BOTTOM PORT (GREY):
+SUBSYSTEM=="tty", KERNELS=="3-2", SYMLINK+="ttyCANable1"
