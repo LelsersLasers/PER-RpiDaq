@@ -37,3 +37,4 @@ sudo nmcli connection modify hotspot \
 
 - Grey top = `ttyCANable0` = VCAN
 - Grey bottom = `ttyCANable1` = MCAN
+- Blue top = `ttyCANable2` = Tranducer

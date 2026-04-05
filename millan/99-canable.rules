@@ -2,4 +2,6 @@
 SUBSYSTEM=="tty", KERNELS=="1-2", SYMLINK+="ttyCANable0"
 # BOTTOM PORT (GREY):
 SUBSYSTEM=="tty", KERNELS=="3-2", SYMLINK+="ttyCANable1"
+# TOP PORT (BLUE):
+SUBSYSTEM=="tty", KERNELS=="3-1", SYMLINK+="ttyCANable2"
 
