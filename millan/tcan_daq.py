@@ -8,4 +8,4 @@ BUS_ID  = 0
 OUTDIR  = './logs/TCAN'
 
 if __name__ == "__main__":
-    SingleBusLogger(device=DEVICE, bus_id=BUS_ID, outdir=OUTDIR, name="TCAN").run()
+    SingleBusLogger(device=DEVICE, bus_id=BUS_ID, outdir=OUTDIR, baud_rate=1_000_000, name="TCAN").run()
