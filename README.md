@@ -9,6 +9,23 @@ Bootstrapping a Raspberry Pi 5 to function as DAQ for early car testing/before D
 - Wifi passoword: `12345678`
 - Wifi SSID: `PER-DaqRpi Wifi`
 
+## How to use
+
+### Default
+
+The Pi should turn on and init all 3 canables and start logging without any intervention
+
+### Get logs
+
+1. Connect to `PER-DaqRpi Wifi` (password: `12345678`)
+2. On latop move to the `millan` folder (`cd millan`)
+3. copy logs: `bash scp_logs.sh`
+4. Rename `millan/copied/logs` to something like `millan/copied/logs_some_text_that_is_useful`
+4. Remove old logs: `bash ssh.sh` and then `cd PER-RpiDaq/millan/logs` and then `rm -vr *`
+  - Don't remove the `logs` folder itself other wise the loggers will crash
+  - This is done because the RPI keeps bad real time
+5. :money: :vd_happy:
+
 ## Where things go
 
 (once)
