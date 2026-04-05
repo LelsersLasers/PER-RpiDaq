@@ -1,0 +1,17 @@
+[Unit]
+Description=PER RPi5 DAQ — VCAN bus logger
+After=network.target
+
+[Service]
+Type=simple
+User=per
+WorkingDirectory=/home/per/PER-RpiDaq/millan
+ExecStart=/usr/bin/python3 /home/per/PER-RpiDaq/millan/vcan_daq.py
+Restart=always
+RestartSec=5
+
+StandardOutput=append:/home/per/PER-RpiDaq/millan/vcan_script_logs.txt
+StandardError=append:/home/per/PER-RpiDaq/millan/vcan_script_logs.txt
+
+[Install]
+WantedBy=multi-user.target

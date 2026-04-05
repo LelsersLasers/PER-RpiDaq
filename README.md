@@ -13,8 +13,10 @@ Bootstrapping a Raspberry Pi 5 to function as DAQ for early car testing/before D
 
 - `millan/99-canable.rules` -> `/etc/udev/rules.d/99-canable.rules`
   - `sudo udevadm control --reload-rules && sudo udevadm trigger`
-- `millan/rpi-daq.service` -> `/etc/systemd/system/rpi-daq.service`
-  - `sudo systemctl daemon-reload && sudo systemctl enable rpi-daq.service && sudo systemctl start rpi-daq.service`
+- `millan/vcan.service` -> `/etc/systemd/system/vcan.service`
+  - `sudo systemctl daemon-reload && sudo systemctl enable vcan.service && sudo systemctl start vcan.service`
+- `millan/mcan.service` -> `/etc/systemd/system/mcan.service`
+  - `sudo systemctl daemon-reload && sudo systemctl enable mcan.service && sudo systemctl start mcan.service`
 
 ## Access point mode
 
@@ -28,7 +30,7 @@ sudo nmcli device wifi hotspot \
 ```bash
 sudo nmcli connection modify hotspot \
   connection.autoconnect yes \
-  connection.autoconnect-priority 10
+  connection.autoconnect-priority 999
 ```
 
 ## Canables
