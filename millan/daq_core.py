@@ -63,6 +63,12 @@ def _read_bus(bus: can.BusABC, bus_id: int, queue: Queue,
                 queue.put(pack_frame(message, ticks_ms, bus_id))
         except can.CanError as e:
             print(f"{name} error: {e}")
+        except ValueError:
+            # python-can slcan driver bug: DLC field can be a hex letter
+            # (e.g. 'F') on some extended frames, causing int() to fail.
+            # The frame is unrecoverable => skip it
+            print(f"{name} warning: skipping malformed frame")
+            pass
     print(f"{name} reader thread exit")
 
 
