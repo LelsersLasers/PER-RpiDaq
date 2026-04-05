@@ -30,3 +30,8 @@ sudo nmcli connection modify hotspot \
   connection.autoconnect yes \
   connection.autoconnect-priority 10
 ```
+
+## Canables
+
+- Grey top = `ttyCANable0` = VCAN
+- Grey bottom = `ttyCANable1` = MCAN
